@@ -26,7 +26,7 @@ body {
 
 header {
     height: 100vh;
-    background-image: url("/public/img/fundo.jpg");
+    background-image: url("/public/img/fundo.jpg"); /*swsw*/
     background-size: cover;
     background-position: center;
 }
