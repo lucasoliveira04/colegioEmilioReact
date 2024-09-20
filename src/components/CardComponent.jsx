@@ -1,3 +1,6 @@
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 export function CardComponent({ selectedEvento, onEventoClick }) {
     const eventos = ["Aquario SP", "Bertioga", "Tamar"];
 
@@ -31,6 +34,20 @@ export function CardComponent({ selectedEvento, onEventoClick }) {
                         Que possamos todos refletir sobre a importância de proteger e preservar nossos oceanos, garantindo um futuro sustentável para as próximas gerações." {selectedEvento}
                     </div>
                 </div>
+
+                <hr className="line bg-amber-300" />
+
+                <Carousel showThumbs={false} autoPlay infiniteLoop>
+                    <div>
+                        <img src="https://via.placeholder.com/800x300?text=Slide+1" alt="Slide 1" />
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/800x300?text=Slide+1" alt="Slide 2" />
+                    </div>
+                    <div>
+                        <img src="https://via.placeholder.com/800x300?text=Slide+3" alt="Slide 3" />
+                    </div>
+                </Carousel>
             </div>
         </div>
     );
