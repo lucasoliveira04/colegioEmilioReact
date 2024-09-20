@@ -4,8 +4,9 @@ export function HeaderComponent({ onEventoClick }) {
     const eventos = ["Gincanas", "Excursões", "Palestras", "Sarau", "Feira Cultural"];
 
     return (
-        <header className="header text-white h-screen bg-cover bg-center" style={{ backgroundImage: "url('/public/img/fundo.jpg')" }}>
-            <nav className="h-20 flex justify-around items-center bg-blue-900">
+        <header className="header text-white h-screen relative">
+            <img src="/public/img/fundo.jpg" alt="Background" className="absolute inset-0 w-full h-full object-cover z-0" />
+            <nav className="h-20 flex justify-around items-center bg-blue-900 relative z-10">
                 <div>
                     <img src="/img/logo.png" className="logo h-full w-auto cursor-pointer" />
                 </div>
