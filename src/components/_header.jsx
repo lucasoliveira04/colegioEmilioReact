@@ -7,7 +7,7 @@ export function HeaderComponent({ onEventoClick }) {
         <header className="header text-white h-screen bg-cover bg-center" style={{ backgroundImage: "url('/public/img/fundo.jpg')" }}>
             <nav className="h-20 flex justify-around items-center bg-blue-900">
                 <div>
-                    <img src="/public/img/logo.png" className="logo h-full w-auto cursor-pointer" />
+                    <img src="/src/img/logo.png" className="logo h-full w-auto cursor-pointer" />
                 </div>
 
                 <div className="flex">
