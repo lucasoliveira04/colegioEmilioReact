@@ -1,12 +1,13 @@
 import logo from "../../public/img/logo.png";
 
 /* eslint-disable */
-export const HeaderComponent = () => {
+export const HeaderComponent = ({onTitleChange}) => {
     const navigationEvents = ["Gincanas", "Palestras", "Exercusões", "Sarau", "Feira Cultural"];
 
     const handleItemClick = (event) => {
         console.log(event);
         console.log(window.location.href);
+        onTitleChange(event)
     };
 
     const handleLogoClick = () => {
@@ -14,7 +15,7 @@ export const HeaderComponent = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row w-full justify-evenly items-center h-20 bg-white z-20 relative">
+        <div className="flex flex-col md:flex-row w-full justify-evenly items-center h-20 bg-white z-20 relative md:fixed">
             <img
                 src={logo}
                 width={"70px"}
@@ -35,5 +36,6 @@ export const HeaderComponent = () => {
                 </ul>
             </nav>
         </div>
+
     );
 };
