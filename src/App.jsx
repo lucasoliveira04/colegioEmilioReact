@@ -6,12 +6,13 @@ import bodyImg from "./public/img/background.png";
 function App() {
     const excursionTitles = ["Tamár", "Bertioga", "Aquário SP"]; 
     const [sectionTitle, setSectionTitle] = useState(excursionTitles[0]); 
-    const sectionRef = useRef(null)
+    const sectionRef = useRef(null);
 
     const handleTitleChange = (newTitle) => {
         setSectionTitle(newTitle); 
         sectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    };
+    
 
     return (
         <div className="min-h-screen flex flex-col">
@@ -27,8 +28,11 @@ function App() {
 
             <div className="m-40"></div>
 
-            <div className="h-96" ref={sectionRef}>
-                <SectionComponent title={sectionTitle}/> 
+            <div
+                className={`h-96 overflow`}
+                ref={sectionRef}
+            >
+                <SectionComponent title={sectionTitle}/>
             </div>
         </div>
     );
